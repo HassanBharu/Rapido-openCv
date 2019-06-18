@@ -7,7 +7,7 @@ print(cap)
 
 car_cascade = cv2.CascadeClassifier('cars.xml')
 
-while (cap.isOpen()):
+while (cap.isOpened()):
     ret, frame = cap.read()
     print(ret)
     grey = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
