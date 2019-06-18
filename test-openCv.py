@@ -10,7 +10,7 @@ cap.open(0)
 
 while (cap.isOpened()):
     ret, frame = cap.read()
-    print(ret)
+    print(frame ,'<<<<')
     grey = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     cars = car_cascade.detectMultiScale(grey,1.1,1)
     for(x,y,w,h) in cars:
