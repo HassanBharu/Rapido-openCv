@@ -6,6 +6,7 @@ cap = cv2.VideoCapture(0)
 print(cap)
 
 car_cascade = cv2.CascadeClassifier('cars.xml')
+cap.open()
 
 while (cap.isOpened()):
     ret, frame = cap.read()
