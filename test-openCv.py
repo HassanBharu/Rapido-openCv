@@ -3,11 +3,13 @@ import numpy as np
 
 
 cap = cv2.VideoCapture(0)
+print(cap)
 
 car_cascade = cv2.CascadeClassifier('cars.xml')
 
 while True:
     ret, img = cap.read()
+    print(ret)
     grey = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     cars = car_cascade.detectMultiScale(grey,1.1,1)
     for(x,y,w,h) in cars:
